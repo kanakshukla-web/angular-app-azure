@@ -1,0 +1,11 @@
+.login-card {
+    border: 2px solid lightblue;
+    top: 30%;
+    left: 40%;
+    width: 50%;
+    padding: 20px;
+}
+
+.login-full-width {
+    width: 100%;
+}
