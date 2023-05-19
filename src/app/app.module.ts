@@ -20,6 +20,8 @@ import { MatMenuModule } from '@angular/material/menu'
 import { MatIconModule } from '@angular/material/icon'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { HttpClientModule } from '@angular/common/http';
+import { GraphQLModule } from './graphql.module';
+import { UsersdataComponent } from './components/usersdata/usersdata.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     LoginComponent,
     HeadersComponent,
-    RegisterComponent
+    RegisterComponent,
+    UsersdataComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatProgressSpinnerModule,
     HttpClientModule,
+    GraphQLModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

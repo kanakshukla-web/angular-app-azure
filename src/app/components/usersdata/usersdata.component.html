@@ -1,0 +1,61 @@
+<app-headers></app-headers>
+
+<div style="top:15%; left: 30%;position: relative;">
+
+    <form style="display: flex;" class="row g-3">
+        <div class="col-auto">
+            <label for="txtEmail" class="visually-hidden">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="userForms.Email" id="txtEmail" name="txtEmail"
+                placeholder="Email">
+        </div> &nbsp;
+        <div class="col-auto">
+            <label for="txtName" class="visually-hidden">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="userForms.Name" id="txtName" name="txtName"
+                placeholder="Name">
+        </div>&nbsp;
+        <div class="col-auto">
+            <label for="txtPassword" class="visually-hidden">Password</label>
+            <input type="text" class="form-control" [(ngModel)]="userForms.Password" id="txtPassword" name="txtPassword"
+                placeholder="password">
+        </div>&nbsp;
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3" (click)="newUser()">Add</button>
+        </div>
+    </form>
+
+    <br>
+    <form style="display: flex;" class="row g-3">
+        <div class="col-auto">
+            <label for="txtSearch" class="visually-hidden">Search By Name</label>
+            <input type="text" [(ngModel)]="selectedName" name="txtSearch" class="form-control" id="txtSearch"
+                placeholder="Search By Name">
+        </div>&nbsp;
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3" (click)="searchByName()">Search</button>&nbsp;
+            <button type="submit" class="btn btn-primary mb-3" (click)="getAllUsers()">Reset All</button>
+        </div>
+    </form>
+    <br>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Email</th>
+                <th scope="col">Name</th>
+                <th scope="col">Password</th>
+                <th scope="col">Updated On</th>
+                <th scope="col">Created On</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of allUsers">
+                <td>{{user.email}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.updatedOn}}</td>
+                <td>{{user.createdOn}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
